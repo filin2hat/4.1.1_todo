@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -54,9 +55,13 @@ public class Main {
         if (list.isEmpty()) {
             System.out.println("Список задач пуст!\n");
         }
-        for (String task : list) {
+        for (Iterator<String> it = list.iterator(); it.hasNext() ;) {
+            String task = it.next();
             System.out.println((list.indexOf(task) + 1) + ". " + task);
         }
+//        for (String task : list) {
+//            System.out.println((list.indexOf(task) + 1) + ". " + task);
+//        }
         System.out.println();
     }
 
