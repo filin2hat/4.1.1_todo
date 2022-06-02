@@ -55,10 +55,14 @@ public class Main {
         if (list.isEmpty()) {
             System.out.println("Список задач пуст!\n");
         }
-        for (Iterator<String> it = list.iterator(); it.hasNext() ;) {
-            String task = it.next();
-            System.out.println((list.indexOf(task) + 1) + ". " + task);
+        for (int i = 0; i < list.size(); i++) {
+            String task = list.get(i);
+            System.out.println((i + 1) + ". " + task);
         }
+//        for (Iterator<String> it = list.iterator(); it.hasNext() ;) {
+//            String task = it.next();
+//            System.out.println((list.indexOf(task) + 1) + ". " + task);
+//        }
 //        for (String task : list) {
 //            System.out.println((list.indexOf(task) + 1) + ". " + task);
 //        }
